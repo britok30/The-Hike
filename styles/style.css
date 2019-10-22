@@ -1,5 +1,6 @@
 html,
-body {
+body,
+div {
   width: 100%;
   height: 100%;
   margin: 0px;
@@ -598,6 +599,17 @@ MEDIA QUERIES
   }
   .text {
     padding: 5rem 0;
+  }
+
+  .ithree,
+  .ifour,
+  .five,
+  .six,
+  .seven,
+  .ieight,
+  .inine,
+  .iten {
+    height: 60vh;
   }
 }
 /* 
