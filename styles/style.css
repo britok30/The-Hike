@@ -6,6 +6,7 @@ body {
   padding: 0px;
   overflow-x: hidden;
 }
+
 html {
   font-size: 62.5%;
 }
@@ -404,6 +405,7 @@ section {
 
 .t-row {
   margin-top: 2rem;
+  margin-bottom: -2rem;
 }
 
 .team-text {
@@ -435,6 +437,7 @@ section {
   list-style: none;
   margin-bottom: 4rem;
   border-radius: 0;
+  padding: 0;
 }
 
 #contact-form li:last-of-type {
@@ -488,25 +491,29 @@ textarea:focus {
   background: #161616;
 }
 
-#media,
 #address,
-#mail {
+#mail,
+#media {
   text-align: center !important;
 }
 
 .footer .container {
-  padding: 160px 0;
+  padding: 16rem 0;
 }
 
 .footer li,
 .footer p,
 .fotter h4 {
-  font-size: 24px !important;
+  font-size: 2.4rem !important;
 }
 
 .footer h4 {
   font-weight: lighter;
   color: #fff;
+}
+
+.footer ul {
+  padding: 0;
 }
 
 .footer p {
@@ -515,10 +522,10 @@ textarea:focus {
 }
 
 .footer li {
-  font-weight: lighter;
+  font-weight: 300;
   color: #fff;
-  padding-left: 20px;
-  font-size: 18px !important;
+  padding: 2rem;
+  font-size: 1.8rem !important;
 }
 
 #media ul {
