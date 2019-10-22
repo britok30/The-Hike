@@ -1,0 +1,536 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+}
+
+.site-wrapper {
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* UTILITIES */
+.sub-heading {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+
+/* HEADER  */
+
+.header {
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.header h1 {
+  color: #fff;
+  font-size: 8rem !important;
+  font-weight: 300;
+  letter-spacing: 4px;
+}
+
+.strong {
+  font-weight: 400;
+}
+
+.video-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #1b1b1b;
+  opacity: 0.1;
+}
+
+/* NAVBAR  */
+.nav {
+  width: 100%;
+  height: 8rem;
+  position: absolute;
+  z-index: 2;
+}
+
+.nav #brand {
+  float: left;
+  display: block;
+  margin-left: 4rem;
+  line-height: 8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+}
+
+.nav #brand a {
+  color: #fff;
+  font-family: "Lato", sans-serif !important;
+  transition: all 500ms ease-out;
+}
+
+.nav #brand a:hover {
+  text-decoration: none;
+}
+
+.nav #menu {
+  float: left;
+  right: 4rem;
+  position: absolute;
+}
+
+.nav #menu li {
+  padding-left: 4rem;
+  display: inline-block;
+  font-weight: 300 !important;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  line-height: 8rem;
+  position: relative;
+  transition: all 500ms ease-out;
+}
+
+.nav #menu li a {
+  font-family: "Lato", sans-serif !important;
+  color: #fff;
+  transition: all 500ms ease-out;
+}
+
+.nav #menu li a:hover {
+  text-decoration: none;
+  color: #000;
+  transition: all 500ms ease-out;
+}
+
+#toggle {
+  position: absolute;
+  right: 4rem;
+  top: 2rem;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  float: right;
+  transition: all 0.3s ease-out;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.close-btn {
+  position: absolute;
+  right: 30px;
+  font-weight: 300;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 2;
+  top: -2px;
+  line-height: 80px;
+}
+
+#resize {
+  z-index: 2;
+  top: 0px;
+  position: fixed;
+  background: #0f0f0f;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+
+#resize #menu {
+  height: 9rem;
+  position: absolute;
+  left: 45%;
+  transform: translateX(-40%);
+  text-align: center;
+  display: table-cell;
+  vertical-align: center;
+}
+
+#resize #menu li {
+  display: block;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 5rem;
+  text-transform: uppercase;
+  min-height: 5rem;
+  font-weight: bold;
+  transition: all 0.3s ease-out;
+}
+
+#resize li:nth-child(1) {
+  margin-top: 14rem;
+}
+
+#resize #menu li a {
+  color: #fff;
+}
+
+#resize #menu li a:hover {
+  text-decoration: none;
+}
+
+#resize.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  #toggle {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 0.6rem;
+    margin-right: 0.4rem;
+  }
+
+  nav #brand {
+    margin-left: 1rem;
+  }
+
+  #resize ul li a {
+    font-size: 1.5rem;
+    font-family: "Lato", sans-serif !important;
+    font-weight: lighter !important;
+    color: rgb(156, 156, 156) !important;
+    transition: all 500ms ease-out;
+  }
+
+  nav #menu {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  #resize {
+    visibility: hidden !important;
+  }
+}
+
+/* CONTENT */
+
+.content {
+  position: absolute;
+  margin-top: 100vh;
+  width: 100%;
+}
+
+section {
+  padding: 14rem 0;
+}
+
+.ione {
+  background: url(../img/about.jpg) no-repeat center center/cover;
+  height: 75vh;
+  border-radius: 3px;
+}
+
+.text {
+  width: 80%;
+}
+
+/* ABOUT */
+
+#about {
+  position: relative;
+}
+
+.design {
+  background-color: #f5f3f1;
+  z-index: -1;
+  height: 50vh;
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 75%;
+}
+
+/* SHOWCASE */
+
+.showcase {
+  background: url(../img/back.jpg) no-repeat center center/cover;
+  height: 80vh;
+  margin: 7rem 0;
+  position: relative;
+}
+
+.explore {
+  width: 60%;
+  position: absolute;
+  top: -80%;
+  left: 10%;
+}
+
+.front {
+  width: 100%;
+}
+
+/* TRAVEL */
+
+#travel {
+  position: relative;
+}
+
+.itwo {
+  background: url(../img/itwo.jpg) no-repeat center center/cover;
+  height: 75vh;
+}
+
+/* GALLERY */
+
+#gallery .ithree {
+  background: url(../img/ithree.jpg) no-repeat center center/cover;
+  height: 40vh;
+}
+
+#gallery .ifour {
+  background: url(../img/ifour.jpg) no-repeat center center/cover;
+  height: 40vh;
+}
+
+#gallery .ifive {
+  background: url(../img/ifive.jpg) no-repeat center center/cover;
+  height: 40vh;
+}
+
+#gallery .isix {
+  background: url(../img/isix.jpg) no-repeat center center/cover;
+  height: 40vh;
+}
+
+#gallery .iseven {
+  background: url(../img/iseven.jpg) no-repeat center center/cover;
+  height: 40vh;
+}
+
+#gallery .ieight {
+  background: url(../img/ieight.jpg) no-repeat center center/cover;
+  height: 40vh;
+}
+
+#gallery .inine {
+  background: url(../img/inine.jpg) no-repeat center center/cover;
+  height: 40vh;
+}
+
+#gallery .iten {
+  background: url(../img/iten.jpg) no-repeat center center/cover;
+  height: 40vh;
+}
+
+/* TEAM */
+
+#team {
+  position: relative;
+}
+
+.team1 {
+  background: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.363),
+      rgba(0, 0, 0, 0.356)
+    ),
+    url(../img/ceo.jpg) no-repeat center center/cover;
+  height: 40vh;
+}
+
+.team2 {
+  background: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.363),
+      rgba(0, 0, 0, 0.356)
+    ),
+    url(../img/cofound.jpg) no-repeat center center/cover;
+  height: 40vh;
+}
+
+.team3 {
+  background: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.363),
+      rgba(0, 0, 0, 0.356)
+    ),
+    url(../img/photographer.jpg) no-repeat center center/cover;
+  height: 40vh;
+}
+
+.team4 {
+  background: linear-gradient(
+      to right bottom,
+      rgba(0, 0, 0, 0.363),
+      rgba(0, 0, 0, 0.356)
+    ),
+    url(../img/manager.jpg) no-repeat center center/cover;
+  height: 40vh;
+}
+
+.t-row {
+  margin-top: 2rem;
+}
+
+.team-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 300;
+}
+
+/* CONTACT */
+
+#contact-form {
+  margin: 5% 0;
+}
+
+.contact-lite {
+  font-weight: 300;
+}
+
+.contact .icon-title {
+  margin-top: 1rem;
+  color: #000;
+}
+
+#contact-form ul {
+  list-style: none;
+  margin-bottom: 4rem;
+  border-radius: 0;
+}
+
+#contact-form li:last-of-type {
+  border-bottom: none;
+}
+
+#contact-form label {
+  display: block;
+  font-size: 2.2rem;
+  color: rgb(97, 97, 97);
+}
+
+.btn {
+  font-size: 1.3rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  resize: vertical;
+  background: transparent;
+  color: #101010;
+  font-weight: 300;
+}
+
+input:focus {
+  outline: none !important;
+  border: none !important;
+}
+
+textarea:focus {
+  outline: none !important;
+  border: none !important;
+}
+
+.textarea {
+  border-bottom: 1px solid #c9c9c9;
+}
+
+@media (max-width: 900px) {
+  #contact-form {
+    margin: 5% 0;
+    width: 98%;
+  }
+}
+
+/* FOOTER */
+.footer {
+  background: #161616;
+}
+
+#media,
+#address,
+#mail {
+  text-align: center !important;
+}
+
+.footer .container {
+  padding: 160px 0;
+}
+
+.footer li,
+.footer p,
+.fotter h4 {
+  font-size: 24px !important;
+}
+
+.footer h4 {
+  font-weight: lighter;
+  color: #fff;
+}
+
+.footer p {
+  color: grey;
+  font-weight: lighter;
+}
+
+.footer li {
+  font-weight: lighter;
+  color: #fff;
+  padding-left: 20px;
+  font-size: 18px !important;
+}
+
+#media ul {
+  list-style: none;
+}
+
+#media ul li {
+  display: inline-block;
+}
+
+@media (max-width: 900px) {
+  .footer .container {
+    width: 92% !important;
+  }
+}
