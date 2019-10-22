@@ -254,7 +254,7 @@ p {
 }
 
 section {
-  padding: 14rem 0;
+  padding: 10rem 0;
 }
 
 .ione {
@@ -263,9 +263,9 @@ section {
   border-radius: 3px;
 }
 
-.text {
+/* .text {
   width: 80%;
-}
+} */
 
 /* ABOUT */
 
@@ -533,4 +533,73 @@ textarea:focus {
   .footer .container {
     width: 92% !important;
   }
+}
+
+/* -----------------------
+MEDIA QUERIES
+----------------------- */
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .header h1 {
+    font-size: 4.5rem !important;
+  }
+}
+
+.text {
+  padding: 5rem 0;
+}
+
+.explore {
+  width: 100%;
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+}
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1023px) and (orientation: landscape) {
+}
+
+@media only screen and (max-width: 812px) and (max-height: 375px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+}
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+}
+
+/* Landscape for Ipad Pro*/
+
+@media only screen and (min-width: 1366px) and (max-height: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1441px to higher resolution desktops
+*/
+
+@media (min-width: 1441px) {
 }
