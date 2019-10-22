@@ -17,6 +17,7 @@ body {
 
 .site-wrapper {
   overflow-x: hidden;
+  width: 150%;
 }
 
 ::-webkit-scrollbar {
@@ -579,6 +580,9 @@ MEDIA QUERIES
 */
 
 @media (min-width: 768px) and (max-width: 1023px) {
+  .text {
+    padding: 5rem 0;
+  }
 }
 /* 
   ##Device = Tablets, Ipads (landscape)
