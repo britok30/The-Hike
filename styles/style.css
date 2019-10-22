@@ -149,7 +149,6 @@ p {
   font-weight: 300;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 2px;
   z-index: 2;
   width: 30px;
   height: 30px;
@@ -342,22 +341,22 @@ section {
   height: 40vh;
 }
 
-#gallery .iseven {
+#gallery2 .iseven {
   background: url(../img/iseven.jpg) no-repeat center center/cover;
   height: 40vh;
 }
 
-#gallery .ieight {
+#gallery2 .ieight {
   background: url(../img/ieight.jpg) no-repeat center center/cover;
   height: 40vh;
 }
 
-#gallery .inine {
+#gallery2 .inine {
   background: url(../img/inine.jpg) no-repeat center center/cover;
   height: 40vh;
 }
 
-#gallery .iten {
+#gallery2 .iten {
   background: url(../img/iten.jpg) no-repeat center center/cover;
   height: 40vh;
 }
